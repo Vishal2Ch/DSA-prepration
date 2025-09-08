@@ -1,0 +1,24 @@
+🔹 What is Operator Overloading?
+
+Operator Overloading means giving additional meaning to existing operators (like +, -, *, etc.)
+when used with user-defined types (like classes or objects).
+
+Java does NOT support operator overloading (except one small exception with + for strings).
+
+So, this is not allowed in Java:
+
+MyClass obj1 = new MyClass();
+MyClass obj2 = new MyClass();
+MyClass obj3 = obj1 + obj2;  // ❌ Error: operator '+' cannot be applied
+
+✅ The only exception: String Concatenation
+
+Java overloads the + operator only for String types.
+
+String name = "Vishal";
+System.out.println("Hello " + name); // ✅ '+' joins strings
+
+
+Behind the scenes, Java converts it to:
+
+System.out.println(new StringBuilder("Hello ").append(name));
